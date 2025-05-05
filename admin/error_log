@@ -1,0 +1,6 @@
+[06-Dec-2024 10:20:35 UTC] PHP Warning:  Undefined variable $i in /home/softgrow/softgrowthinfotech.com/bugtracking/admin/update_bug.php on line 76
+[06-Dec-2024 10:20:35 UTC] PHP Warning:  Undefined array key "" in /home/softgrow/softgrowthinfotech.com/bugtracking/admin/update_bug.php on line 76
+[06-Dec-2024 10:20:35 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/softgrow/softgrowthinfotech.com/bugtracking/admin/update_bug.php on line 76
+[06-Dec-2024 10:20:35 UTC] PHP Warning:  Undefined variable $i in /home/softgrow/softgrowthinfotech.com/bugtracking/admin/update_bug.php on line 81
+[06-Dec-2024 10:20:35 UTC] PHP Warning:  Undefined array key "" in /home/softgrow/softgrowthinfotech.com/bugtracking/admin/update_bug.php on line 81
+[06-Dec-2024 10:20:35 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/softgrow/softgrowthinfotech.com/bugtracking/admin/update_bug.php on line 81
