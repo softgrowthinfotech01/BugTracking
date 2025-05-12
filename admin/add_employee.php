@@ -4,9 +4,10 @@ require_once "conn.php";
 require_once "check_login.php";
 if(isset($_POST['submit']))
 {
+
   extract($_POST);
-  $stmt = $conn->prepare("INSERT INTO employee(employee_type, employee_name, employee_email, employee_password) VALUES (:employee_type, :employee_name, :employee_email, :employee_password)");
-   $executed=$stmt->execute(array(':employee_type' => $employee_type, ':employee_name' => $employee_name, ':employee_email' => $employee_email, ':employee_password' => $employee_password));
+  $stmt = $conn->prepare("INSERT INTO employee(employee_type, employee_name, employee_email, employee_password, employee_img ) VALUES (:employee_type, :employee_name, :employee_email, :employee_password, :employee_img )");
+   $executed=$stmt->execute(array(':employee_type' => $employee_type, ':employee_name' => $employee_name, ':employee_email' => $employee_email, ':employee_password' => $employee_password, ':employee_img' => $employee_img));
    if($executed){
        echo '<script>alert("Employee added successfully.");window.location.href = "add_employee";</script>';
 
@@ -16,6 +17,7 @@ if(isset($_POST['submit']))
 
    }
 }
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -135,7 +137,6 @@ if(isset($_POST['submit']))
                   <td><?php echo $row_employee[$i]['employee_type'];?></td>
                   <td><?php echo $row_employee[$i]['employee_email'];?></td>
                   <td><?php echo $row_employee[$i]['employee_password'];?></td>
-                  
                   <td>
                     <a href="update_employee?id=<?php echo $row_employee[$i]['employee_id'];?>" class="btn btn-info btn-sm">Update</a>
                   </td>

@@ -59,7 +59,18 @@ if(isset($_POST['submit']))
                 <div class="col-md-10">
                   <div class="form-group">
                     <label class="control-label">Project Manager</label>
-                    <input type="text" class="form-control" name="project_manager" >
+                    <!-- <input type="text" class="form-control" name="project_manager" > -->
+                    <select name="project_manager" id="">
+                      <option >--Select--</option>
+                      <?php
+                      $stmt= $conn->prepare("SELECT * FROM project");
+                      $stmt->execute();
+         $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
+         for($j=0;$j<count($row);$j++){
+                         ?>
+                      <option value="<?php echo $row[$j]['project_manager']; ?>"><?php echo $row[$j]['project_manager']; ?></option>
+                    <?php } ?>
+                    </select>
                   </div>
                 </div>
                 <div class="col-md-10">
